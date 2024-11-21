@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+ <script>
+
+// // task1 Greeting Function
+console.log(" Task-1//Greeting Function")
+name=prompt("Enter U R Name");
+function greet(g="Dear"){
+console.log("Hello "+name)
+}
+greet()
+
+
+
+// //  task2 Sum Function
+console.log(" Task-2//Sum Function")
+a=+prompt("Enter One Number");
+b=+prompt("Enter Another Number")
+function sum (){
+console.log(a+b)
+}
+sum(a,b)
+
+
+// //  task3 Square Function
+console.log(" Task-3//Square Function")
+f=+prompt("Enter One Number to Get its Square Value");
+function fac(){
+console.log(f*f)
+}
+fac(f)
+
+
+
+//  task4 Average Function
+console.log(" Task-4//Average Function")
+// let arr=[1,2,3,4,5];
+// let add=0;
+// function average(i){
+//     console.log("list of anumbers")
+// for (i=0;i<arr.length;i++){
+//     console.log(arr[i])
+//     add+=arr[i]
+//     avg=add/arr.length
+// }
+// }
+// average()
+// console.log("Average is "+avg)
+
+let str=prompt("Enter Numbers with ',' to Get there Average").split(",");
+let add=0;
+function average(i){
+  console.log("list of anumbers")
+  for(i=0;i<str.length;i++){
+    console.log(str[i])
+    add+=Number(str[i])
+    avg=add/str.length
+  }
+}
+average()
+console.log("Average is "+avg)
+
+
+
+// //  task5 Finding Vowels
+console.log(" Task-5//Finding Vowels")
+function findVowels() {
+  const str = prompt("Enter a string:");
+  const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+  const foundVowels = [];
+
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str[i])) {
+      foundVowels.push(str[i]);
+    }
+  }
+
+  if (foundVowels.length > 0) {
+    console.log("Vowels found:", foundVowels.join(", "));
+  } else {
+    console.log("No vowels found.");
+  }
+}
+findVowels();
+
+
+//  task6 Converting Temperature
+// Prompting the user for input
+console.log(" Task-6//Converting Temperature Into C or F")
+let temp = parseFloat(prompt("Enter the temperature:"));
+let scale = prompt("Enter the scale to convert to (C or F):");
+function convertTemperature(temp, scale) {
+    if (scale === "C") {
+        return (temp - 32) * 5 / 9;
+    } else if (scale === "F") {
+        return (temp * 9 / 5) + 32;
+    } else {
+        return "Invalid scale";
+    }
+  }
+  // Converting the temperature and displaying the result
+  let convertedTemp = convertTemperature(temp, scale);
+  console.log(`The converted temperature is: ${convertedTemp}`);
+
+    </script>
+
+</body>
+</html>
